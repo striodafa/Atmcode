@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class KelulusanProgram {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Masukkan nilai absen: ");
+        int nilaiAbsen = scanner.nextInt();
+
+        System.out.print("Masukkan nilai tugas: ");
+        int nilaiTugas = scanner.nextInt();
+
+        int nilaiTotal = (nilaiAbsen + nilaiTugas) / 2;
+
+        System.out.println("\nHasil Nilai:");
+        System.out.println("Nilai Absen: " + nilaiAbsen);
+        System.out.println("Nilai Tugas: " + nilaiTugas);
+        System.out.println("Nilai Total: " + nilaiTotal);
+
+        if (nilaiTotal >= 70) {
+            System.out.println("Selamat! Anda lulus.");
+        } else {
+            System.out.println("Maaf, Anda tidak lulus. Coba lagi next time.");
+        }
+
+        scanner.close();
+    }
+}
