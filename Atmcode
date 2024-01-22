@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class Latihan {
+
+    private static final String PASSWORD = "satriodafatamvans"; // Ganti dengan password yang diinginkan
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Masukkan password: ");
+        String enteredPassword = scanner.nextLine();
+
+        if (enteredPassword.equals(PASSWORD)) {
+            System.out.println("Selamat datang di Mesin ATM!");
+            displayMenu(scanner);
+        } else {
+            System.out.println("Password salah. Program berhenti.");
+        }
+    }
+
+    private static void displayMenu(Scanner scanner) {
+        int choice;
+
+        do {
+            System.out.println("\nMenu ATM:");
+            System.out.println("1. Cek Saldo");
+            System.out.println("2. Deposit");
+            System.out.println("3. Tarik Tunai");
+            System.out.println("4. Keluar");
+            System.out.print("Pilih nomor menu (1-4): ");
+
+            choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    cekSaldo();
+                    break;
+                case 2:
+                    deposit(scanner);
+                    break;
+                case 3:
+                    tarikTunai(scanner);
+                    break;
+                case 4:
+                    System.out.println("Terima kasih telah menggunakan Mesin ATM. Sampai jumpa!");
+                    break;
+                default:
+                    System.out.println("Pilihan tidak valid. Silakan pilih nomor menu yang benar.");
+            }
+        } while (choice != 4);
+
+        scanner.close();
+    }
+
+    private static void cekSaldo() {
+        // Implementasi cek saldo
+        System.out.println("Implementasi cek saldo");
+    }
+
+    private static void deposit(Scanner scanner) {
+        // Implementasi deposit
+        System.out.println("Implementasi deposit");
+    }
+
+    private static void tarikTunai(Scanner scanner) {
+        // Implementasi tarik tunai
+        System.out.println("Implementasi tarik tunai");
+    }
+}
